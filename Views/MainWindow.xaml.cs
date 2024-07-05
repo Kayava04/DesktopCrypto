@@ -1,23 +1,29 @@
-﻿using System.Text;
+﻿using DesktopCrypto.Core;
+using DesktopCrypto.Models;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DesktopCrypto.Views
 {
     public partial class MainWindow : Window
     {
-        private bool _isLightTheme = true;
+        private ThemeElements _elements;
 
         public MainWindow()
         {
             InitializeComponent();
+
+            _elements = new ThemeElements()
+            {
+                BorderBackground = BorderBackground,
+                MinimizeButton = MinimizeButton,
+                CloseButton = CloseButton,
+                CurrencyButton = CurrencyButton,
+                GraphicButton = GraphicButton,
+                ConverterButton = ConverterButton
+                // Data4Button = Data4Button,
+                // Data5Button = Data5Button
+            };
         }
 
         #region BASE METHODS
@@ -30,32 +36,9 @@ namespace DesktopCrypto.Views
 
         private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
         {
-            //WindowState = WindowState.Minimized;
-            if (_isLightTheme)
-            {
-                BorderBackground.Style = (Style)FindResource("BorderDarkStyle");
-                MinimizeButton.Style = (Style)FindResource("MinimizeDarkStyle");
-                CloseButton.Style = (Style)FindResource("CloseDarkStyle");
-                CurrencyButton.Style = (Style)FindResource("TabDarkStyle");
-                GraphicButton.Style = (Style)FindResource("TabDarkStyle");
-                ConverterButton.Style = (Style)FindResource("TabDarkStyle");
-                //Data4Button.Style = (Style)FindResource("TabDarkStyle");
-                //Data5Button.Style = (Style)FindResource("TabDarkStyle");
-            }
+            WindowState = WindowState.Minimized;
 
-            else
-            {
-                BorderBackground.Style = (Style)FindResource("BorderLightStyle");
-                MinimizeButton.Style = (Style)FindResource("MinimizeLightStyle");
-                CloseButton.Style = (Style)FindResource("CloseLightStyle");
-                CurrencyButton.Style = (Style)FindResource("TabLightStyle");
-                GraphicButton.Style = (Style)FindResource("TabLightStyle");
-                ConverterButton.Style = (Style)FindResource("TabLightStyle");
-                //Data4Button.Style = (Style)FindResource("TabLightStyle");
-                //Data5Button.Style = (Style)FindResource("TabLightStyle");
-            }
-
-            _isLightTheme = !_isLightTheme;
+            //ThemeChanger.ChangeTheme(this, _elements);
         }
 
         private void CloseWindow_Click(object sender, RoutedEventArgs e)
