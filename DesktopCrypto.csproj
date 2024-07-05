@@ -20,8 +20,4 @@
     <Content Include="Images\Cryptocurrency.ico" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
-
 </Project>

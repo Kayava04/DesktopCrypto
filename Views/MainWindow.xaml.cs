@@ -47,5 +47,10 @@ namespace DesktopCrypto.Views
         }
 
         #endregion
+
+        private async void GetDataAsync()
+        {
+
+        }
     }
 }
