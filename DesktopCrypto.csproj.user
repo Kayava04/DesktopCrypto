@@ -7,22 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Styles\ButtonStyles.xaml">
+    <Page Update="Styles\CheckBoxStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Styles\CheckBoxStyles.xaml">
+    <Page Update="Styles\DarkProgramStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\DataGridStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Styles\TextBlockStyles.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Styles\TextBoxStyles.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Styles\ToolTipStyles.xaml">
+    <Page Update="Styles\LightProgramStyle.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainWindow.xaml">

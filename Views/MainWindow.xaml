@@ -15,23 +15,22 @@
 
     <!--// Main Window \\-->
     <Border
-        CornerRadius="20"
-        Background="#eff2f7"
-        BorderThickness="0">
+        x:Name="BorderBackground"
+        Style="{StaticResource BorderLightStyle}">
 
         <Grid>
-            
+
             <!--// Window Markup \\-->
             <Grid.RowDefinitions>
                 <RowDefinition Height="50"/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="75"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
+
             <!--// Top Bar Section \\-->
             <Border
                 Background="Transparent"
-                 BorderThickness="0"
+                BorderThickness="0"
                 MouseDown="MoveWindow_MouseDown">
 
                 <StackPanel
@@ -39,19 +38,81 @@
                     HorizontalAlignment="Right">
 
                     <Button
-                        Style="{StaticResource MinimizeStyle}"
+                        x:Name="MinimizeButton"
+                        Style="{StaticResource MinimizeLightStyle}"
                         Click="MinimizeWindow_Click"/>
 
                     <Button
-                        Style="{StaticResource CloseStyle}"
+                        x:Name="CloseButton"
+                        Style="{StaticResource CloseLightStyle}"
                         Click="CloseWindow_Click"/>
 
                 </StackPanel>
-                
+
             </Border>
 
+            <!--// Tab Buttons Section \\-->
+            <Grid
+                Grid.Row="1"
+                Background="Transparent">
+
+                <Separator
+                    Height="1"
+                    Background="#dae2ea"
+                    Margin="20,-1,20,-30"/>
+
+                <StackPanel
+                    Orientation="Horizontal">
+
+                    <Button
+                        x:Name="CurrencyButton"
+                        Content="Popular cryptocurrency"
+                        Width="175"
+                        Style="{StaticResource TabLightStyle}"/>
+
+                    <Button
+                        x:Name="GraphicButton"
+                        Content="Graphic"
+                        Width="70"
+                        Style="{StaticResource TabLightStyle}"/>
+
+                    <Button
+                        x:Name="ConverterButton"
+                        Content="Converter"
+                        Width="80"
+                        Style="{StaticResource TabLightStyle}"/>
+
+                    <!--<Button
+                        x:Name="Data4Button"
+                        Content="City"
+                        Width="45"
+                        Style="{StaticResource TabLightStyle}"/>
+
+                    <Button
+                        x:Name="Data5Button"
+                        Content="Migration | System Info"
+                        Width="175"
+                        Style="{StaticResource TabLightStyle}"/>-->
+
+                </StackPanel>
+
+            </Grid>
+
+            <!--// Main Section \\-->
+            <Grid
+                Grid.Row="2"
+                Background="Transparent">
+
+                <!--// Main Section Markup \\-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="350"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+            </Grid>
+
         </Grid>
-        
+
     </Border>
 
 </Window>
