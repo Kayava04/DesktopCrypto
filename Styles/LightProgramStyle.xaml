@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!--// Border Light Style \\-->
+    <!--// Border Style \\-->
     <Style x:Key="BorderLightStyle" TargetType="{x:Type Border}">
 
         <Setter Property="CornerRadius" Value="20"/>
@@ -11,7 +11,7 @@
 
     </Style>
 
-    <!--// Minimize Light Button Style \\-->
+    <!--// Minimize Button Style \\-->
     <Style x:Key="MinimizeLightStyle" TargetType="{x:Type Button}">
 
         <Setter Property="Height" Value="40"/>
@@ -54,7 +54,7 @@
 
     </Style>
 
-    <!--// Close Light Button Style \\-->
+    <!--// Close Button Style \\-->
     <Style x:Key="CloseLightStyle" TargetType="{x:Type Button}">
 
         <Setter Property="Height" Value="40"/>
@@ -97,15 +97,15 @@
 
     </Style>
 
-    <!--// Add Light Button Style \\-->
-    <Style x:Key="AddLightStyle" TargetType="{x:Type Button}">
+    <!--// Changing Theme Button Style \\-->
+    <Style x:Key="ChangeLightStyle" TargetType="{x:Type Button}">
 
-        <Setter Property="Height" Value="30"/>
+        <Setter Property="Height" Value="40"/>
         <Setter Property="Width" Value="50"/>
-        <Setter Property="Background" Value="#512da8"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="#4a148c"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Margin" Value="0,0,35,10"/>
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
 
         <Setter Property="Template">
@@ -113,18 +113,16 @@
                 <ControlTemplate TargetType="{x:Type Button}">
 
                     <Border
-                        CornerRadius="5"
                         Background="{TemplateBinding Background}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        Padding="5">
+                        BorderBrush="{TemplateBinding BorderBrush}">
 
                         <ContentControl
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
 
                             <Image
-                                Source="/Images/Add.png"
+                                Source="/Images/Dark.png"
                                 RenderOptions.BitmapScalingMode="Fant"/>
 
                         </ContentControl>
@@ -133,7 +131,7 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#673ab7"/>
+                            <Setter Property="BorderBrush" Value="#784ff2"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
 
@@ -143,7 +141,7 @@
 
     </Style>
 
-    <!--// Tab Light Buttons Style \\-->
+    <!--// Tab Buttons Style \\-->
     <Style x:Key="TabLightStyle" TargetType="{x:Type Button}">
 
         <Setter Property="Height" Value="30"/>
@@ -190,15 +188,15 @@
 
     </Style>
 
-    <!--// Edit Light Button Style \\-->
-    <Style x:Key="EditLightButtonStyle" TargetType="{x:Type Button}">
+    <!--// Search Button Style \\-->
+    <Style x:Key="SearchLightStyle" TargetType="{x:Type Button}">
 
-        <Setter Property="Height" Value="30"/>
-        <Setter Property="Width" Value="50"/>
-        <Setter Property="Background" Value="#512da8"/>
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="auto"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="#4a148c"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
 
         <Setter Property="Template">
@@ -209,15 +207,14 @@
                         CornerRadius="5"
                         Background="{TemplateBinding Background}"
                         BorderThickness="{TemplateBinding BorderThickness}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        Padding="5">
+                        BorderBrush="{TemplateBinding BorderBrush}">
 
                         <ContentControl
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center">
 
                             <Image
-                                Source="/Images/Edit.png"
+                                Source="/Images/Search.png"
                                 RenderOptions.BitmapScalingMode="Fant"/>
 
                         </ContentControl>
@@ -226,7 +223,7 @@
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#673ab7"/>
+                            <Setter Property="Background" Value="#784ff2"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
 
@@ -236,290 +233,48 @@
 
     </Style>
 
-    <!--// Remove Light Button Style \\-->
-    <Style x:Key="RemoveLightButtonStyle" TargetType="{x:Type Button}">
-
-        <Setter Property="Height" Value="30"/>
-        <Setter Property="Width" Value="50"/>
-        <Setter Property="Background" Value="#d32f2f"/>
-        <Setter Property="BorderBrush" Value="#b71c1c"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-
-                    <Border
-                        CornerRadius="5"
-                        Background="{TemplateBinding Background}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        Padding="5">
-
-                        <ContentControl
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
-
-                            <Image
-                                Source="/Images/Remove.png"
-                                RenderOptions.BitmapScalingMode="Fant"/>
-
-                        </ContentControl>
-
-                    </Border>
-
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#f44336"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-    </Style>
-
-    <!--// Back Light Button Style \\-->
-    <Style x:Key="BackLightButtonStyle" TargetType="{x:Type Button}">
-
-        <Setter Property="Height" Value="40"/>
-        <Setter Property="Width" Value="40"/>
-        <Setter Property="Background" Value="#512da8"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Background" Value="#6741d9"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0,0,10,0"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-
-                    <Border
-                        CornerRadius="5"
-                        Background="{TemplateBinding Background}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        Padding="5">
-
-                        <ContentControl
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
-
-                            <Image
-                                Source="/Images/Back.png"
-                                RenderOptions.BitmapScalingMode="Fant"/>
-
-                        </ContentControl>
-
-                    </Border>
-
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#7b5cd6"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-    </Style>
-
-    <!--// Save Light Button Style \\-->
-    <Style x:Key="SaveLightButtonStyle" TargetType="{x:Type Button}">
-
-        <Setter Property="Height" Value="30"/>
-        <Setter Property="Width" Value="50"/>
-        <Setter Property="Background" Value="#512da8"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="BorderBrush" Value="#4a148c"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-
-                    <Border
-                        CornerRadius="5"
-                        Background="{TemplateBinding Background}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        Padding="5">
-
-                        <ContentControl
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
-
-                            <Image
-                                Source="/Images/Save.png"
-                                RenderOptions.BitmapScalingMode="Fant"/>
-
-                        </ContentControl>
-
-                    </Border>
-
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#673ab7"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-    </Style>
-
-    <!--// Migration Light Button Style \\-->
-    <Style x:Key="MigrationLightButtonStyle" TargetType="{x:Type Button}">
-
-        <Setter Property="Height" Value="40"/>
-        <Setter Property="Width" Value="40"/>
-        <Setter Property="Background" Value="#512da8"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Background" Value="#6741d9"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0,0,10,0"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-
-                    <Border
-                        CornerRadius="5"
-                        Background="{TemplateBinding Background}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        Padding="5">
-
-                        <ContentControl
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
-
-                            <Image
-                                Source="/Images/Create.png"
-                                RenderOptions.BitmapScalingMode="Fant"/>
-
-                        </ContentControl>
-
-                    </Border>
-
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#7b5cd6"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-    </Style>
-
-    <!--// Remove Light Migration Button Style \\-->
-    <Style x:Key="RemoveLightMigrationButtonStyle" TargetType="{x:Type Button}">
-
-        <Setter Property="Height" Value="40"/>
-        <Setter Property="Width" Value="40"/>
-        <Setter Property="Background" Value="#512da8"/>
-        <Setter Property="BorderThickness" Value="1"/>
-        <Setter Property="Background" Value="#6741d9"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0,0,10,0"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-
-                    <Border
-                        CornerRadius="5"
-                        Background="{TemplateBinding Background}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        Padding="5">
-
-                        <ContentControl
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center">
-
-                            <Image
-                                Source="/Images/Remove.png"
-                                RenderOptions.BitmapScalingMode="Fant"/>
-
-                        </ContentControl>
-
-                    </Border>
-
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#7b5cd6"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-
-    </Style>
-
-    <!--// Info Light TextBlock Style \\-->
-    <Style x:Key="InfoLightTextBlockStyle" TargetType="{x:Type TextBlock}">
-
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="Foreground" Value="#121518"/>
-        <Setter Property="FontFamily" Value="Bahnschrift Light"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="Margin" Value="0,10,10,0"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-
-    </Style>
-
-    <!--// Input Light TextBox Style \\-->
+    <!--// Input TextBox Style \\-->
     <Style x:Key="InputLightStyle" TargetType="{x:Type TextBox}">
 
         <Setter Property="Height" Value="35"/>
         <Setter Property="Width" Value="200"/>
         <Setter Property="Background" Value="White"/>
         <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="Margin" Value="0,10,10,0"/>
+        <Setter Property="Margin" Value="0"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Foreground" Value="#121518"/>
         <Setter Property="FontFamily" Value="Bahnschrift Light"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
         <Setter Property="Padding" Value="8,0,0,0"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
 
                     <Border
-                    CornerRadius="5"
-                    Background="{TemplateBinding Background}"
-                    BorderThickness="{TemplateBinding BorderThickness}">
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}">
 
                         <Grid>
 
                             <TextBox x:Name="SearchBox"
-                            Text="{Binding Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
-                            Background="Transparent"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
-                            Foreground="{TemplateBinding Foreground}"
-                            Padding="5,0,0,0"/>
+                                Text="{Binding Text, RelativeSource={RelativeSource TemplatedParent}, UpdateSourceTrigger=PropertyChanged}"
+                                Background="Transparent"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                Foreground="{TemplateBinding Foreground}"
+                                Padding="5,0,0,0"/>
 
                             <TextBlock
-                            IsHitTestVisible="False"
-                            Text="Input..."
-                            Opacity="0.5"
-                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                            Margin="0,2,0,0"
-                            Padding="{TemplateBinding Padding}">
+                                IsHitTestVisible="False"
+                                Text="Search..."
+                                Opacity="0.5"
+                                VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                                Margin="0,2,0,0"
+                                Padding="{TemplateBinding Padding}">
 
                                 <TextBlock.Style>
                                     <Style TargetType="{x:Type TextBlock}">
@@ -545,8 +300,20 @@
 
     </Style>
 
-    <!--// Button Light ToolTip \\-->
-    <Style x:Key="ButtonLightToolTipStyle" TargetType="{x:Type ToolTip}">
+    <!--// Info TextBlock Style \\-->
+    <Style x:Key="InfoLightTextBlockStyle" TargetType="{x:Type TextBlock}">
+
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="#121518"/>
+        <Setter Property="FontFamily" Value="Bahnschrift Light"/>
+        <Setter Property="Margin" Value="0,10,10,0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+
+    </Style>
+
+    <!--// Button ToolTips \\-->
+    <Style x:Key="ButtonLightToolTipsStyle" TargetType="{x:Type ToolTip}">
 
         <Setter Property="Height" Value="25"/>
         <Setter Property="Width" Value="120"/>
@@ -555,24 +322,23 @@
         <Setter Property="BorderBrush" Value="Gray"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="FontFamily" Value="Bahnschrift Light"/>
-        <Setter Property="FontWeight" Value="SemiBold"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToolTip}">
 
                     <Border
-                    CornerRadius="5"
-                    Background="{TemplateBinding Background}"
-                    BorderThickness="{TemplateBinding BorderThickness}"
-                    BorderBrush="{TemplateBinding BorderBrush}">
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}">
 
                         <ContentPresenter
-                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"/>
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"/>
 
                     </Border>
 

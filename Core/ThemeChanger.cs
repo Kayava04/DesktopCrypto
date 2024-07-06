@@ -17,8 +17,8 @@ namespace DesktopCrypto.Core
                 element.CurrencyButton.Style = 
                     element.GraphicButton.Style = 
                         element.ConverterButton.Style = (Style)context.FindResource("TabDarkStyle");
-                            //element.Data4Button.Style = (Style)context.FindResource("TabDarkStyle");
-                                //element.Data5Button.Style = (Style)context.FindResource("TabDarkStyle");
+                element.ThemeChanging.Style = (Style)context.FindResource("ChangeDarkStyle");
+                element.SearchButton.Style = (Style)context.FindResource("SearchDarkStyle");
             }
 
             else
@@ -29,8 +29,8 @@ namespace DesktopCrypto.Core
                 element.CurrencyButton.Style =
                     element.GraphicButton.Style =
                         element.ConverterButton.Style = (Style)context.FindResource("TabLightStyle");
-                            //element.Data4Button.Style = (Style)context.FindResource("TabLightStyle");
-                                //element.Data5Button.Style = (Style)context.FindResource("TabLightStyle");
+                element.ThemeChanging.Style = (Style)context.FindResource("ChangeLightStyle");
+                element.SearchButton.Style = (Style)context.FindResource("SearchLightStyle");
             }
 
             _isLightTheme = !_isLightTheme;

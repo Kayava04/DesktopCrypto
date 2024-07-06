@@ -20,9 +20,9 @@ namespace DesktopCrypto.Views
                 CloseButton = CloseButton,
                 CurrencyButton = CurrencyButton,
                 GraphicButton = GraphicButton,
-                ConverterButton = ConverterButton
-                // Data4Button = Data4Button,
-                // Data5Button = Data5Button
+                ConverterButton = ConverterButton,
+                ThemeChanging = ThemeChanging,
+                SearchButton = SearchButton
             };
         }
 
@@ -37,8 +37,6 @@ namespace DesktopCrypto.Views
         private void MinimizeWindow_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
-
-            //ThemeChanger.ChangeTheme(this, _elements);
         }
 
         private void CloseWindow_Click(object sender, RoutedEventArgs e)
@@ -48,6 +46,26 @@ namespace DesktopCrypto.Views
 
         #endregion
 
+        private void ThemeChanging_Click(object sender, RoutedEventArgs e)
+        {
+            ThemeChanger.ChangeTheme(this, _elements);
+        }
+
+        private void CryptoTextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Submit_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private async void GetDataAsync()
         {
             var cryptocurrencyDataFetcher = new CryptocurrencyDataFetcher();
@@ -55,7 +73,7 @@ namespace DesktopCrypto.Views
 
             //if (cryptocurrencyDataList != null)
             //{
-                
+
             //}
             //else
             //{

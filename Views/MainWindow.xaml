@@ -96,6 +96,17 @@
 
                 </StackPanel>
 
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+
+                    <Button
+                        x:Name="ThemeChanging"
+                        Style="{StaticResource ChangeLightStyle}"
+                        Click="ThemeChanging_Click"/>
+
+                </StackPanel>
+
             </Grid>
 
             <!--// Main Section \\-->
@@ -104,10 +115,44 @@
                 Background="Transparent">
 
                 <!--// Main Section Markup \\-->
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="350"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!--// Search Panel \\-->
+                <Border
+                    Background="Transparent"
+                    BorderThickness="0">
+
+                    <StackPanel
+                        Orientation="Horizontal"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center">
+
+                        <TextBox
+                            x:Name="CryptoTextBox"
+                            Style="{StaticResource InputLightStyle}"
+                            TextChanged="CryptoTextBox_TextChanged"
+                            KeyDown="Submit_KeyDown"/>
+
+                        <Button
+                            x:Name="SearchButton"
+                            Style="{StaticResource SearchLightStyle}"
+                            Click="SearchButton_Click"/>
+
+                    </StackPanel>
+
+                </Border>
+
+                <!--// Display Data Panel \\-->
+                <Grid
+                    Grid.Row="1"
+                    Background="Transparent">
+
+
+
+                </Grid>
 
             </Grid>
 

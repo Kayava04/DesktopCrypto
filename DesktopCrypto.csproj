@@ -17,7 +17,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\Dark.png" />
+    <None Remove="Images\Light.png" />
+    <None Remove="Images\Search.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Images\Cryptocurrency.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Dark.png" />
+    <Resource Include="Images\Light.png" />
+    <Resource Include="Images\Search.png" />
   </ItemGroup>
 
 </Project>

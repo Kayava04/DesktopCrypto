@@ -1,32 +1,58 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!--// Border Dark Style \\-->
-    <Style x:Key="BorderDarkStyle" TargetType="{x:Type Border}">
-
-        <Setter Property="CornerRadius" Value="20"/>
+    <!--// Border Style \\-->
+    <Style x:Key="BorderDarkStyle" TargetType="{x:Type Border}" BasedOn="{StaticResource BorderLightStyle}">
         <Setter Property="Background" Value="#272535"/>
-        <Setter Property="BorderThickness" Value="0"/>
-        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-
     </Style>
 
-    <!--// Minimize Dark Button Style \\-->
+    <!--// Minimize Button Style \\-->
     <Style x:Key="MinimizeDarkStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource MinimizeLightStyle}">
         <Setter Property="Foreground" Value="#eff2f7"/>
     </Style>
 
-    <!--// Close Dark Button Style \\-->
+    <!--// Close Button Style \\-->
     <Style x:Key="CloseDarkStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource CloseLightStyle}">
         <Setter Property="Foreground" Value="#eff2f7"/>
     </Style>
 
-    <!--// Add Dark Button Style \\-->
-    <Style x:Key="AddDarkStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource AddLightStyle}">
-        <Setter Property="Foreground" Value="White"/>
+    <!--// Changing Button Style \\-->
+    <Style x:Key="ChangeDarkStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource ChangeLightStyle}">
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Light.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#43A047"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
     </Style>
 
-    <!--// Tab Dark Button Style \\-->
+    <!--// Tab Buttons Style \\-->
     <Style x:Key="TabDarkStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource TabLightStyle}">
         <Setter Property="Foreground" Value="#eff2f7"/>
 
@@ -63,34 +89,51 @@
 
     </Style>
 
-    <!--// Edit Dark Button Style \\-->
-    <Style x:Key="EditDarkButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource EditLightButtonStyle}">
-        <Setter Property="Foreground" Value="White"/>
+    <!--// Search Button Style \\-->
+    <Style x:Key="SearchDarkStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource SearchLightStyle}">
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+
+                    <Border
+                        CornerRadius="5"
+                        Background="{TemplateBinding Background}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        BorderBrush="{TemplateBinding BorderBrush}">
+
+                        <ContentControl
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center">
+
+                            <Image
+                                Source="/Images/Search.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+
+                        </ContentControl>
+
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#43A047"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
     </Style>
 
-    <!--// Remove Dark Button Style \\-->
-    <Style x:Key="RemoveDarkButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource RemoveLightButtonStyle}">
-        <Setter Property="Foreground" Value="White"/>
+    <!--// Info TextBlock Style \\-->
+    <Style x:Key="InfoDarkTextBlockStyle" TargetType="{x:Type TextBlock}" BasedOn="{StaticResource InfoLightTextBlockStyle}">
+
     </Style>
 
-    <!--// Back Dark Button Style \\-->
-    <Style x:Key="BackDarkButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource BackLightButtonStyle}">
-        <Setter Property="Foreground" Value="White"/>
-    </Style>
+    <!--// Button ToolTips \\-->
+    <Style x:Key="ButtonDarkToolTipStyle" TargetType="{x:Type ToolTip}" BasedOn="{StaticResource ButtonLightToolTipStyle}">
 
-    <!--// Save Dark Button Style \\-->
-    <Style x:Key="SaveDarkButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource SaveLightButtonStyle}">
-        <Setter Property="Foreground" Value="White"/>
-    </Style>
-
-    <!--// Migration Dark Button Style \\-->
-    <Style x:Key="MigrationDarkButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource MigrationLightButtonStyle}">
-        <Setter Property="Foreground" Value="White"/>
-    </Style>
-
-    <!--// Remove Dark Migration Button Style \\-->
-    <Style x:Key="RemoveDarkMigrationButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource RemoveLightMigrationButtonStyle}">
-        <Setter Property="Foreground" Value="White"/>
     </Style>
 
 </ResourceDictionary>
