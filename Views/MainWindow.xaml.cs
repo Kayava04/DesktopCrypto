@@ -50,7 +50,17 @@ namespace DesktopCrypto.Views
 
         private async void GetDataAsync()
         {
+            var cryptocurrencyDataFetcher = new CryptocurrencyDataFetcher();
+            var cryptocurrencyDataList = await cryptocurrencyDataFetcher.GetCryptocurrencyListAsync();
 
+            //if (cryptocurrencyDataList != null)
+            //{
+                
+            //}
+            //else
+            //{
+
+            //}
         }
     }
 }
