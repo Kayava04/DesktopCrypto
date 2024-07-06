@@ -1,6 +1,7 @@
 ﻿using DesktopCrypto.Models;
 using Newtonsoft.Json;
 using System.Net.Http;
+using System.Windows;
 
 namespace DesktopCrypto.Core
 {
@@ -22,8 +23,14 @@ namespace DesktopCrypto.Core
                     
                     return cryptocurrencyDataList;
                 }
-                catch (HttpRequestException)
+                catch (HttpRequestException ex)
                 {
+                    MessageBox.Show("Error getting data, try again!", "API error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Unexpected error: {ex.Message}", "Unexpected error", MessageBoxButton.OK, MessageBoxImage.Error);
                     return null;
                 }
             }

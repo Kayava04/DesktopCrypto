@@ -23,6 +23,6 @@ namespace DesktopCrypto.Models
         public double ChangePercent24Hr { get; set; }
 
         [JsonProperty("marketCapUsd")]
-        public decimal MarketCupUSD { get; set; }
+        public decimal MarketCapUSD { get; set; }
     }
 }
