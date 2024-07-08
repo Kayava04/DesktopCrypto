@@ -7,13 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Styles\CheckBoxStyles.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Styles\DarkProgramStyle.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Styles\DataGridStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\LightProgramStyle.xaml">

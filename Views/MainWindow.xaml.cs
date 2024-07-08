@@ -24,6 +24,8 @@ namespace DesktopCrypto.Views
                 ThemeChanging = ThemeChanging,
                 SearchButton = SearchButton
             };
+
+            GetDataAsync();
         }
 
         #region BASE METHODS
@@ -63,13 +65,13 @@ namespace DesktopCrypto.Views
 
         private void SearchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private async void GetDataAsync()
         {
-            var cryptocurrencyDataFetcher = new CryptocurrencyDataFetcher();
-            var cryptocurrencyDataList = await cryptocurrencyDataFetcher.GetCryptocurrencyListAsync();
+            //var cryptocurrencyDataFetcher = new CryptocurrencyDataFetcher();
+            //var cryptocurrencyDataList = await cryptocurrencyDataFetcher.GetCryptocurrencyListAsync();
 
             //if (cryptocurrencyDataList != null)
             //{
@@ -79,6 +81,22 @@ namespace DesktopCrypto.Views
             //{
 
             //}
+
+
+            var cryptoDataList = new List<CryptocurrencyData>
+            {
+                new CryptocurrencyData
+                {
+                    Rank = 1,
+                    Name = "Bitcoin",
+                    Symbol = "BTC",
+                    PriceUSD = 57926.91m,
+                    ChangePercent24Hr = 2.56,
+                    MarketCapUSD = 1.324234m
+                }
+            };
+
+            GridCrypto.ItemsSource = cryptoDataList;
         }
     }
 }

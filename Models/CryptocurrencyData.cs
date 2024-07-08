@@ -4,9 +4,6 @@ namespace DesktopCrypto.Models
 {
     public class CryptocurrencyData
     {
-        [JsonProperty("id")]
-        public string ID { get; set; }
-
         [JsonProperty("name")]
         public string Name { get; set; }
 

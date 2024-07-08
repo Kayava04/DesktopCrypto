@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DesktopCrypto.Views"
+        xmlns:local="clr-namespace:DesktopCrypto"
         mc:Ignorable="d"
         Height="720"
         Width="1080"
@@ -150,7 +150,39 @@
                     Grid.Row="1"
                     Background="Transparent">
 
+                    <DataGrid
+                        x:Name="GridCrypto"
+                        Style="{StaticResource DataGridLightStyle}">
 
+                        <DataGrid.Columns>
+
+                            <DataGridTextColumn
+                                Header="#"
+                                Binding="{Binding Rank}"/>
+
+                            <DataGridTextColumn
+                                Header="Name"
+                                Binding="{Binding Name}"/>
+
+                            <DataGridTextColumn
+                                Header="Symbol"
+                                Binding="{Binding Symbol}"/>
+
+                            <DataGridTextColumn
+                                Header="Price (USD)"
+                                Binding="{Binding PriceUSD}"/>
+
+                            <DataGridTextColumn
+                                Header="Change (%)"
+                                Binding="{Binding ChangePercent24Hr}"/>
+
+                            <DataGridTextColumn
+                                Header="Market Cap (USD)"
+                                Binding="{Binding MarketCapUSD}"/>
+
+                        </DataGrid.Columns>
+
+                    </DataGrid>
 
                 </Grid>
 
